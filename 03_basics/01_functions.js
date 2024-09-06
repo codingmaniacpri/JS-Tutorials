@@ -33,5 +33,39 @@ function loginUserMessage(username = "sam"){ //--> default value
     return `${username} just logged in`
 }
 
-console.log(loginUserMessage("priyanshi"))
-console.log(loginUserMessage()) //undefined will come if nothing is there
+// console.log(loginUserMessage("priyanshi"))
+// console.log(loginUserMessage()) //undefined will come if nothing is there
+
+//Shopping Cart situation, where we don't know how many items will be added by customer
+//Situation where we don't know how many arguments will come (REST Operator)
+
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+}
+
+// console.log(calculateCartPrice(200, 500, 300, 2000)) //val1 =200, val2 = 500 and num1 = 300 and 2000
+const user = {
+    name: "priyanshi",
+    price: 199
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.name} and price is ${anyobject.price}`)
+}
+
+//Passing Objects
+// handleObject(user);
+handleObject({
+    name: "sam",
+    price: 399
+})
+
+//Passing Arrays
+const myNewArray = [300, 400, 200, 100]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(myNewArray))
+console.log(returnSecondValue([100, 200, 300, 400]))
